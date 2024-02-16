@@ -6,7 +6,7 @@ Try it out [here](https://yurikasper.github.io/color-shifter/)
 
 ![Example showing Netflix logo in red and green](screenshots/netflix.png?raw=true "Example")
 
-## Features:
+## Features
 
 - Simple Material Design 3 interface
 - Eyedropper and color picker
@@ -14,13 +14,13 @@ Try it out [here](https://yurikasper.github.io/color-shifter/)
 - Preserves transparencies
 - Ideal for single color illustrations with gradients
 
-## Screenshots:
+## Screenshots
 
 ![User interface with eyedropper active and image (discord logo) intact](screenshots/UI_before.png?raw=true "User Interface")
 ![User interface with color picker open](screenshots/UI_picker.png?raw=true "Color Picker")
 ![User interface with image colors changed from purple to magenta](screenshots/UI_after.png?raw=true "Modified image")
 
-## Bundle:
+## Bundle
 
 Build bundle from source with:
 ```
