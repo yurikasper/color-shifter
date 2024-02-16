@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Shifter</title>
+    <link rel="stylesheet" href="lib/coloris.min.css"/>
+    <script src="lib/coloris.min.js"></script>
+
+    <script src="./bundle.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div id="app">
+        <div class="controls">
+            <!-- source color picker -->
+            <md-outlined-text-field id="color-from" class="color-input" value="#e50913">
+                <md-icon-button id="color-picker-button" slot="leading-icon">
+                    <md-icon><img src="media/picker.png" alt=""></md-icon>
+                </md-icon-button>
+            </md-outlined-text-field>
+            <!-- arrow icon -->
+            <div class="arrow"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m600-200-57-56 184-184H80v-80h647L544-704l56-56 280 280-280 280Z"/></svg></div>
+            <!-- destination color selector -->
+            <md-outlined-text-field id="color-to" class="color-input" value="#12dd12" data-coloris>
+                <!-- <md-icon-button id="color-select-button" slot="leading-icon"> -->
+                    <md-icon slot="leading-icon"><img src="media/palette.png" alt=""></md-icon>
+                <!-- </md-icon-button> -->
+            </md-outlined-text-field>
+            
+            <br><br>
+
+            <!-- saturation threshold selector -->
+            <label class="saturation-label">
+                <span class="saturation-text">Saturation Threshold</span>
+                <md-slider id="saturation-slider" step="0.01" min="0.01" max="1" value="0.01"></md-slider>
+            </label>
+            <!-- "transform" / submit button -->
+            <md-filled-button id="submit-button">Transform</md-filled-button>
+        </div>
+        
+        <div class="preview">
+            <!-- output image -->
+            <div id="image-container">
+            </div> 
+
+            <div class="fab-container">
+                <!-- Floating action button for image download -->
+                <md-fab id="save-image" variant="secondary" aria-label="Save Image">
+                    <!-- file downloader icon -->
+                    <md-icon slot="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M19 9h-4V3H9v6H5l7 7 7-7zm-8 2V5h2v6h1.17L12 13.17 9.83 11H11zm-6 7h14v2H5z"/></svg></md-icon>
+                </md-fab>
+                <!-- Floating action button for image picker -->
+                <md-fab id="load-image" size="large" aria-label="Load Image" label="Open">
+                    <!-- file upload icon -->
+                    <md-icon slot="icon"><svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><path d="M18,15v3H6v-3H4v3c0,1.1,0.9,2,2,2h12c1.1,0,2-0.9,2-2v-3H18z M7,9l1.41,1.41L11,7.83V16h2V7.83l2.59,2.58L17,9l-5-5L7,9z"/></g></svg></md-icon>
+                </md-fab>
+            </div>
+        </div>
+    </div>
+    <input type="file" id="file">
+</body>
+</html>
